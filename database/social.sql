@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2019 at 11:58 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: May 01, 2024 at 06:01 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -36,30 +35,24 @@ CREATE TABLE `comments` (
   `date_added` datetime NOT NULL,
   `removed` varchar(3) NOT NULL,
   `post_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `comments`
 --
 
 INSERT INTO `comments` (`id`, `post_body`, `posted_by`, `posted_to`, `date_added`, `removed`, `post_id`) VALUES
-(1, 'lol', 'jim_alsadik', 'rabbi_ahmed', '2019-05-09 14:55:08', 'no', 1),
-(2, 'Please guys say something???', 'jim_alsadik', 'jim_alsadik', '2019-05-09 15:00:30', 'no', 3),
-(3, 'Vendetta?!', 'rabbi_ahmed', 'jim_alsadik', '2019-05-09 15:01:50', 'no', 3),
-(4, 'bal', 'tasnim_noor', 'rabbi_ahmed', '2019-05-19 08:20:47', 'no', 1),
-(5, 'Great', 'jim_alsadik', 'tasnim_noor', '2019-06-22 16:46:07', 'no', 10),
-(6, 'Agreed', 'jim_alsadik', 'tasnim_noor', '2019-06-22 16:46:16', 'no', 9),
-(7, 'HMMM', 'jim_alsadik', 'rabbi_ahmed', '2019-06-22 16:46:24', 'no', 8),
-(8, 'Hahahahahahaha', 'jim_alsadik', 'rabbi_ahmed', '2019-06-22 16:46:33', 'no', 7),
-(9, '?!', 'jim_alsadik', 'rabbi_ahmed', '2019-06-22 16:46:40', 'no', 6),
-(10, '!!!', 'rabbi_ahmed', 'tasnim_noor', '2019-06-22 16:47:12', 'no', 10),
-(11, 'WOW', 'rabbi_ahmed', 'jim_alsadik', '2019-06-22 16:47:18', 'no', 11),
-(12, 'hello', 'rabbi_ahmed', 'jim_alsadik', '2019-06-22 16:47:45', 'no', 2),
-(13, 'nice', 'tasnim_noor', 'jim_alsadik', '2019-06-22 16:51:00', 'no', 11),
-(14, 'Sure?!', 'tasnim_noor', 'rabbi_ahmed', '2019-06-22 16:51:27', 'no', 8),
-(15, '!!!!', 'tasnim_noor', 'rabbi_ahmed', '2019-06-22 16:51:47', 'no', 7),
-(16, 'anonymous', 'tasnim_noor', 'jim_alsadik', '2019-06-22 16:51:58', 'no', 3),
-(17, 'Hi !', 'tasnim_noor', 'jim_alsadik', '2019-06-22 16:54:16', 'no', 2);
+(20, 'wow', 'ayoub_sebaai', 'ayoub_sebaai', '2024-04-26 12:27:25', 'no', 19),
+(21, 'sounds good', 'driss_tawfik', 'ayoub_sebaai', '2024-04-26 12:37:13', 'no', 19),
+(22, 'awah', 'ayoub_sebaai', 'driss_tawfik', '2024-04-26 17:56:47', 'no', 20),
+(23, '', 'ayoub_sebaai', 'driss_tawfik', '2024-04-26 18:17:59', 'no', 20),
+(24, '', 'ayoub_sebaai', 'driss_tawfik', '2024-04-26 18:18:00', 'no', 20),
+(25, 'ewddsa', 'ayoub_sebaai', 'ayoub_sebaai', '2024-04-27 01:15:38', 'no', 21),
+(26, 'dsadas', 'ayoub_sebaai', 'ayoub_sebaai', '2024-04-27 01:41:43', 'no', 21),
+(27, 'wa3la zok kidayre ', 'brahim_amssayfe', 'ayoub_sebaai', '2024-04-30 08:44:53', 'no', 21),
+(28, 'dir like w9', 'brahim_amssayfe', 'brahim_amssayfe', '2024-04-30 08:45:17', 'no', 31),
+(29, 'hhhh', 'ayoub_sebaai', 'brahim_amssayfe', '2024-04-30 08:47:34', 'no', 31),
+(30, 'w3la 9waadaaaa!!!', 'ayoub_sebaai', 'azzeddine_moubine', '2024-05-01 16:23:46', 'no', 32);
 
 -- --------------------------------------------------------
 
@@ -71,7 +64,7 @@ CREATE TABLE `friend_requests` (
   `id` int(11) NOT NULL,
   `user_to` varchar(50) NOT NULL,
   `user_from` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -83,16 +76,18 @@ CREATE TABLE `likes` (
   `id` int(11) NOT NULL,
   `username` varchar(60) NOT NULL,
   `post_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `likes`
 --
 
 INSERT INTO `likes` (`id`, `username`, `post_id`) VALUES
-(1, 'jim_alsadik', 1),
-(3, 'rabbi_ahmed', 3),
-(4, 'jim_alsadik', 3);
+(6, 'driss_tawfik', 20),
+(25, 'ayoub_sebaai', 31),
+(65, 'brahim_amssayfe', 21),
+(78, 'azzeddine_moubine', 21),
+(79, 'ayoub_sebaai', 32);
 
 -- --------------------------------------------------------
 
@@ -109,16 +104,21 @@ CREATE TABLE `messages` (
   `opened` varchar(3) NOT NULL,
   `viewed` varchar(3) NOT NULL,
   `deleted` varchar(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `messages`
 --
 
 INSERT INTO `messages` (`id`, `user_to`, `user_from`, `body`, `date`, `opened`, `viewed`, `deleted`) VALUES
-(1, 'jim_alsadik', 'rabbi_ahmed', 'hey buddy\r\nhow are you???', '2019-05-09 14:57:22', 'yes', 'yes', 'no'),
-(2, 'rabbi_ahmed', 'jim_alsadik', 'im fine , cool', '2019-05-09 14:57:47', 'yes', 'yes', 'no'),
-(3, 'jim_alsadik', 'rabbi_ahmed', 'Great', '2019-05-09 15:02:09', 'yes', 'yes', 'no');
+(6, 'ayoub_sebaai', 'driss_tawfik', 'slm ajmi cv', '2024-04-26 12:41:44', 'yes', 'yes', 'no'),
+(7, 'driss_tawfik', 'ayoub_sebaai', 'cv akhoya ', '2024-04-26 12:42:20', 'yes', 'yes', 'no'),
+(8, 'driss_tawfik', 'ayoub_sebaai', 'si7r\r\n', '2024-04-26 12:42:49', 'yes', 'yes', 'no'),
+(16, 'brahim_amssayfe', 'ayoub_sebaai', 'slm cv ', '2024-04-30 08:43:41', 'yes', 'yes', 'no'),
+(17, 'ayoub_sebaai', 'brahim_amssayfe', 'aji n7wik \r\n', '2024-04-30 08:44:32', 'yes', 'yes', 'no'),
+(18, 'brahim_amssayfe', 'ayoub_sebaai', 'ok \r\n', '2024-04-30 08:46:15', 'yes', 'yes', 'no'),
+(19, 'ayoub_sebaai', 'brahim_amssayfe', 'hhhhhhhhh', '2024-04-30 09:08:53', 'no', 'yes', 'no'),
+(21, 'azzeddine_moubine', 'ayoub_sebaai', 'dor t9wd\r\n', '2024-05-01 16:24:25', 'no', 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -135,38 +135,63 @@ CREATE TABLE `notifications` (
   `datetime` datetime NOT NULL,
   `opened` varchar(3) NOT NULL,
   `viewed` varchar(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `notifications`
 --
 
 INSERT INTO `notifications` (`id`, `user_to`, `user_from`, `message`, `link`, `datetime`, `opened`, `viewed`) VALUES
-(1, 'rabbi_ahmed', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=1', '2019-05-09 14:55:08', 'yes', 'yes'),
-(2, 'rabbi_ahmed', 'jim_alsadik', 'Jim Alsadik liked your post', 'post.php?id=1', '2019-05-09 14:55:50', 'yes', 'yes'),
-(3, 'jim_alsadik', 'rabbi_ahmed', 'Rabbi Ahmed liked your post', 'post.php?id=3', '2019-05-09 15:01:17', 'no', 'yes'),
-(4, 'jim_alsadik', 'rabbi_ahmed', 'Rabbi Ahmed commented on your post', 'post.php?id=3', '2019-05-09 15:01:50', 'no', 'yes'),
-(5, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=1', '2019-05-19 08:20:47', 'no', 'yes'),
-(6, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=1', '2019-05-19 08:20:47', 'no', 'yes'),
-(7, 'tasnim_noor', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=10', '2019-06-22 16:46:07', 'no', 'no'),
-(8, 'tasnim_noor', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=9', '2019-06-22 16:46:16', 'no', 'no'),
-(9, 'rabbi_ahmed', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=8', '2019-06-22 16:46:24', 'no', 'no'),
-(10, 'rabbi_ahmed', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=7', '2019-06-22 16:46:33', 'no', 'no'),
-(11, 'rabbi_ahmed', 'jim_alsadik', 'Jim Alsadik commented on your post', 'post.php?id=6', '2019-06-22 16:46:40', 'no', 'no'),
-(12, 'tasnim_noor', 'rabbi_ahmed', 'Rabbi Ahmed commented on your post', 'post.php?id=10', '2019-06-22 16:47:12', 'no', 'no'),
-(13, 'jim_alsadik', 'rabbi_ahmed', 'Rabbi Ahmed commented on a post you commented on', 'post.php?id=10', '2019-06-22 16:47:12', 'no', 'yes'),
-(14, 'jim_alsadik', 'rabbi_ahmed', 'Rabbi Ahmed commented on your post', 'post.php?id=11', '2019-06-22 16:47:18', 'no', 'yes'),
-(15, 'jim_alsadik', 'rabbi_ahmed', 'Rabbi Ahmed commented on your post', 'post.php?id=2', '2019-06-22 16:47:45', 'no', 'yes'),
-(16, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=11', '2019-06-22 16:51:00', 'no', 'yes'),
-(17, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=11', '2019-06-22 16:51:00', 'no', 'no'),
-(18, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=8', '2019-06-22 16:51:27', 'no', 'no'),
-(19, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=8', '2019-06-22 16:51:27', 'no', 'yes'),
-(20, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=7', '2019-06-22 16:51:47', 'no', 'no'),
-(21, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=7', '2019-06-22 16:51:47', 'no', 'yes'),
-(22, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=3', '2019-06-22 16:51:58', 'no', 'yes'),
-(23, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=3', '2019-06-22 16:51:58', 'no', 'no'),
-(24, 'jim_alsadik', 'tasnim_noor', 'Tasnim Noor commented on your post', 'post.php?id=2', '2019-06-22 16:54:16', 'no', 'yes'),
-(25, 'rabbi_ahmed', 'tasnim_noor', 'Tasnim Noor commented on a post you commented on', 'post.php?id=2', '2019-06-22 16:54:16', 'no', 'no');
+(27, 'ayoub_sebaai', 'driss_tawfik', 'Driss Tawfik commented on your post', 'post.php?id=19', '2024-04-26 12:37:13', 'yes', 'yes'),
+(28, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai commented on your post', 'post.php?id=20', '2024-04-26 17:56:47', 'no', 'no'),
+(29, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 17:57:09', 'no', 'no'),
+(30, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 17:57:11', 'no', 'no'),
+(31, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 17:57:15', 'no', 'no'),
+(32, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 17:57:17', 'no', 'no'),
+(33, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 18:00:09', 'no', 'no'),
+(34, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 18:00:13', 'no', 'no'),
+(35, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 18:07:02', 'no', 'no'),
+(36, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-04-26 18:07:22', 'no', 'no'),
+(37, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai commented on your post', 'post.php?id=20', '2024-04-26 18:17:59', 'no', 'no'),
+(38, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai commented on your post', 'post.php?id=20', '2024-04-26 18:18:00', 'no', 'no'),
+(39, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-27 02:52:39', 'yes', 'yes'),
+(40, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe commented on your post', 'post.php?id=21', '2024-04-30 08:44:53', 'yes', 'yes'),
+(41, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 08:47:30', 'no', 'yes'),
+(42, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai commented on your post', 'post.php?id=31', '2024-04-30 08:47:34', 'no', 'yes'),
+(43, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 08:53:49', 'no', 'yes'),
+(44, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:04:51', 'no', 'yes'),
+(45, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:04:52', 'no', 'yes'),
+(46, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:04:53', 'no', 'yes'),
+(47, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:05:25', 'no', 'yes'),
+(48, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:07:26', 'no', 'yes'),
+(49, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:07:28', 'no', 'yes'),
+(50, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:07:29', 'no', 'yes'),
+(51, 'brahim_amssayfe', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=31', '2024-04-30 09:08:01', 'no', 'yes'),
+(52, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:08:59', 'no', 'yes'),
+(53, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:08:59', 'no', 'yes'),
+(54, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:00', 'no', 'yes'),
+(55, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:00', 'no', 'yes'),
+(56, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:00', 'no', 'yes'),
+(57, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:06', 'no', 'yes'),
+(58, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:08', 'no', 'yes'),
+(59, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-04-30 09:09:10', 'no', 'yes'),
+(60, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:08:30', 'no', 'yes'),
+(61, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:08:32', 'no', 'yes'),
+(62, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:11:58', 'no', 'yes'),
+(63, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:13:48', 'no', 'yes'),
+(64, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:13:51', 'no', 'yes'),
+(65, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:13:53', 'no', 'yes'),
+(66, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:13:56', 'no', 'yes'),
+(67, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:13:59', 'no', 'yes'),
+(68, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 14:14:27', 'no', 'yes'),
+(69, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 15:21:55', 'no', 'yes'),
+(70, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-05-01 15:22:13', 'no', 'no'),
+(71, 'ayoub_sebaai', 'brahim_amssayfe', 'Brahim Amssayfe liked your post', 'post.php?id=21', '2024-05-01 15:26:58', 'no', 'yes'),
+(72, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-05-01 15:27:39', 'no', 'no'),
+(73, 'driss_tawfik', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=20', '2024-05-01 15:54:50', 'no', 'no'),
+(74, 'ayoub_sebaai', 'azzeddine_moubine', 'Azzeddine Moubine liked your post', 'post.php?id=21', '2024-05-01 16:23:16', 'no', 'yes'),
+(75, 'azzeddine_moubine', 'ayoub_sebaai', 'Ayoub Sebaai liked your post', 'post.php?id=32', '2024-05-01 16:23:39', 'no', 'no'),
+(76, 'azzeddine_moubine', 'ayoub_sebaai', 'Ayoub Sebaai commented on your post', 'post.php?id=32', '2024-05-01 16:23:46', 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -184,24 +209,32 @@ CREATE TABLE `posts` (
   `deleted` varchar(3) NOT NULL,
   `likes` int(11) NOT NULL,
   `image` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `body`, `added_by`, `user_to`, `date_added`, `user_closed`, `deleted`, `likes`, `image`) VALUES
-(1, 'Yahoo<br /> ', 'rabbi_ahmed', 'none', '2019-05-09 14:54:28', 'no', 'yes', 1, ''),
-(2, 'Hi', 'jim_alsadik', 'none', '2019-05-09 14:54:55', 'no', 'no', 0, ''),
-(3, 'How this picture is?!', 'jim_alsadik', 'none', '2019-05-09 15:00:04', 'no', 'no', 2, 'assets/images/posts/5cd432648737b1920x1080-anonymous_masks_anonymous_photography_mask-24393.jpg'),
-(4, 'jim kutta<br /> ', 'tasnim_noor', 'none', '2019-05-19 08:22:44', 'no', 'yes', 0, ''),
-(5, 'sudhu ami valo maye tora sobai kharap', 'tasnim_noor', 'none', '2019-05-19 08:22:57', 'no', 'yes', 0, ''),
-(6, 'Feeling Great', 'rabbi_ahmed', 'none', '2019-06-22 16:39:13', 'no', 'no', 0, ''),
-(7, 'On Messenger', 'rabbi_ahmed', 'none', '2019-06-22 16:39:38', 'no', 'no', 0, 'assets/images/posts/5d0e4bba0ddc9orca-image-1482326708855.jpg_1482326709159.jpeg'),
-(8, 'Try hard, be the best.', 'rabbi_ahmed', 'none', '2019-06-22 16:41:08', 'no', 'no', 0, ''),
-(9, 'Decession making is very much important', 'tasnim_noor', 'none', '2019-06-22 16:41:50', 'no', 'no', 0, ''),
-(10, 'Hmm', 'tasnim_noor', 'none', '2019-06-22 16:43:55', 'no', 'no', 0, 'assets/images/posts/5d0e4cbbe8551image_10f9596e-1af5-4d5d-8768-d6ea52a7f27220180213_111519.jpg'),
-(11, 'One day with elders!', 'jim_alsadik', 'none', '2019-06-22 16:45:08', 'no', 'no', 0, 'assets/images/posts/5d0e4d04455f33281b5dff5d0a87b9f4cdebd1672ca88s_n1.jpg');
+(14, 'thuram', 'ayoub_sebaai', 'none', '2024-04-26 12:22:09', 'no', 'yes', 0, 'assets/images/posts/662b8e61694262bc6b68d4898900be2cd48d28b326b70.jpg'),
+(15, 'thuram', 'ayoub_sebaai', 'none', '2024-04-26 12:22:21', 'no', 'yes', 0, 'assets/images/posts/662b8e6d3cf282bc6b68d4898900be2cd48d28b326b70.jpg'),
+(16, 'thuram', 'ayoub_sebaai', 'none', '2024-04-26 12:22:24', 'no', 'yes', 0, 'assets/images/posts/662b8e704abf52bc6b68d4898900be2cd48d28b326b70.jpg'),
+(17, 'ddddd', 'ayoub_sebaai', 'none', '2024-04-26 12:26:19', 'no', 'yes', 0, 'assets/images/posts/662b8f5bb2a752bc6b68d4898900be2cd48d28b326b70.jpg'),
+(18, 'ddddd', 'ayoub_sebaai', 'none', '2024-04-26 12:26:25', 'no', 'yes', 0, 'assets/images/posts/662b8f613f8442bc6b68d4898900be2cd48d28b326b70.jpg'),
+(19, 'omg', 'ayoub_sebaai', 'none', '2024-04-26 12:27:17', 'no', 'yes', 0, 'assets/images/posts/662b8f95a51872bc6b68d4898900be2cd48d28b326b70.jpg'),
+(20, '7ta ana', 'driss_tawfik', 'none', '2024-04-26 12:41:21', 'no', 'no', 1, 'assets/images/posts/662b92e1b82462bc6b68d4898900be2cd48d28b326b70.jpg'),
+(21, 'hello world', 'ayoub_sebaai', 'none', '2024-04-27 01:15:21', 'no', 'no', 7, 'assets/images/posts/662c439990cba2bc6b68d4898900be2cd48d28b326b70.jpg'),
+(22, 'koko', 'ayoub_sebaai', 'none', '2024-04-27 01:24:42', 'no', 'yes', 0, ''),
+(23, 'tnakt', 'ayoub_sebaai', 'none', '2024-04-27 01:58:43', 'no', 'yes', 0, 'assets/images/posts/662c4dc3465052bc6b68d4898900be2cd48d28b326b70.jpg'),
+(24, 'tnakt', 'ayoub_sebaai', 'none', '2024-04-27 01:58:46', 'no', 'yes', 0, 'assets/images/posts/662c4dc6550c22bc6b68d4898900be2cd48d28b326b70.jpg'),
+(25, 'okoko', 'ayoub_sebaai', 'none', '2024-04-27 03:01:17', 'no', 'yes', 0, ''),
+(26, 'okoko', 'ayoub_sebaai', 'none', '2024-04-27 03:02:03', 'no', 'yes', 0, ''),
+(27, 'apa', 'ayoub_sebaai', 'none', '2024-04-27 03:16:56', 'no', 'yes', 0, 'assets/images/posts/662c60180bf07artworks-9b5uKQs6rEecP9Pc-XTz2SA-t500x500.jpg'),
+(28, 'apa', 'ayoub_sebaai', 'none', '2024-04-27 03:16:59', 'no', 'yes', 0, 'assets/images/posts/662c601bb3abcartworks-9b5uKQs6rEecP9Pc-XTz2SA-t500x500.jpg'),
+(29, 'apa', 'ayoub_sebaai', 'none', '2024-04-27 03:17:02', 'no', 'yes', 0, 'assets/images/posts/662c601e828deartworks-9b5uKQs6rEecP9Pc-XTz2SA-t500x500.jpg'),
+(30, 'apa', 'ayoub_sebaai', 'none', '2024-04-27 03:17:04', 'no', 'yes', 0, 'assets/images/posts/662c602091bc8artworks-9b5uKQs6rEecP9Pc-XTz2SA-t500x500.jpg'),
+(31, 'maradona ajmi', 'brahim_amssayfe', 'none', '2024-04-30 08:45:08', 'no', 'yes', 0, 'assets/images/posts/6630a18451552sticker-png-diego-maradona-topaz-thumbnail.png'),
+(32, 'ha sb3 ja ws3 ws3', 'azzeddine_moubine', 'none', '2024-05-01 16:22:51', 'no', 'no', 1, 'assets/images/posts/66325e4b5312b660b649decd01.jpeg');
 
 -- --------------------------------------------------------
 
@@ -217,51 +250,7 @@ CREATE TABLE `post_comments` (
   `date_added` datetime NOT NULL,
   `removed` varchar(3) NOT NULL,
   `post_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `trends`
---
-
-CREATE TABLE `trends` (
-  `title` varchar(50) NOT NULL,
-  `hits` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `trends`
---
-
-INSERT INTO `trends` (`title`, `hits`) VALUES
-('Social', 1),
-('Site', 1),
-('Br', 1),
-('BAUET', 1),
-('Glitters', 1),
-('Rabbi', 1),
-('Ahmed', 1),
-('Hi', 2),
-('Yahoobr', 1),
-('Picture', 1),
-('Jim', 1),
-('Kuttabr', 1),
-('Sudhu', 1),
-('Ami', 1),
-('Valo', 1),
-('Maye', 1),
-('Tora', 1),
-('Sobai', 1),
-('Kharap', 1),
-('Feeling', 1),
-('Messenger', 1),
-('Try', 1),
-('Hard', 1),
-('Decession', 1),
-('Hmm', 1),
-('Day', 1),
-('Elders', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -282,18 +271,17 @@ CREATE TABLE `users` (
   `num_likes` int(11) NOT NULL,
   `user_closed` varchar(3) NOT NULL,
   `friend_array` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `signup_date`, `profile_pic`, `num_posts`, `num_likes`, `user_closed`, `friend_array`) VALUES
-(1, 'Jim', 'Alsadik', 'jim_alsadik', 'Jimalsadik@gmail.com', 'b4c8c893207bc6f27c384153dc751a24', '2019-05-09', 'assets/images/profile_pics/jim_alsadik94d4df121c67bcb1efe8e317a81a72d9n.jpeg', 5, 2, 'no', ',rabbi_ahmed,tasnim_noor,'),
-(2, 'Rabbi', 'Ahmed', 'rabbi_ahmed', 'Rabbi202@outlook.com', 'd1fe775b52c73c2a73477e8a26b7a01a', '2019-05-09', 'assets/images/profile_pics/rabbi_ahmedd13abf489da83983e2f3244d0c0531b0n.jpeg', 5, 1, 'no', ',jim_alsadik,tasnim_noor,'),
-(3, 'Tasnim', 'Noor', 'tasnim_noor', 'Tasnimsanda@gmail.com', '383457c01e28cf01179c5035e9b89732', '2019-05-18', 'assets/images/profile_pics/tasnim_noor8cc1eb9dfe751f333b40e6216a11460dn.jpeg', 4, 0, 'no', ',jim_alsadik,rabbi_ahmed,enam_suhash,'),
-(4, 'Enam', 'Suhash', 'enam_suhash', 'Easuhash@yahoo.com', '68b2326123681498f854db9495170ac0', '2019-05-19', 'assets/images/profile_pics/defaults/head_deep_blue.png', 0, 0, 'no', ',tasnim_noor,'),
-(5, 'Mobid', 'Khan', 'mobid_khan', 'Rockmobid@gmail.com', 'ebbcded9ae1d8415b301bada97caa320', '2019-06-19', 'assets/images/profile_pics/defaults/head_deep_blue.png', 0, 0, 'no', ',');
+(8, 'Ayoub', 'Sebaai', 'ayoub_sebaai', 'Apa@gmail.com', 'dcc1636470b3cf78676e9ebe79244157', '2024-04-26', 'assets/images/profile_pics/ayoub_sebaaic882b8062289361c59a3dd16832a7d6an.jpeg', 16, 7, 'no', ',driss_tawfik,brahim_amssayfe,azzeddine_moubine,'),
+(9, 'Driss', 'Tawfik', 'driss_tawfik', 'Apapa@gmail.com', 'dcc1636470b3cf78676e9ebe79244157', '2024-04-26', 'assets/images/profile_pics/defaults/head_emerald.png', 1, 1, 'no', ',ayoub_sebaai,'),
+(10, 'Brahim', 'Amssayfe', 'brahim_amssayfe', 'Brahim@gmail.com', 'dcc1636470b3cf78676e9ebe79244157', '2024-04-27', 'assets/images/profile_pics/brahim_amssayfe739a39882d8829f4587c321b78e1d81en.jpeg', 1, 0, 'no', ',ayoub_sebaai,'),
+(11, 'Azzeddine', 'Moubine', 'azzeddine_moubine', 'Azzeddinemoubine01@gmail.com', 'e4c61804c30b251ebecb1b767a5ba942', '2024-05-01', 'assets/images/profile_pics/azzeddine_moubineca681558cc747b26e77651bf6ef94317n.jpeg', 1, 1, 'no', ',ayoub_sebaai,');
 
 --
 -- Indexes for dumped tables
@@ -349,43 +337,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `friend_requests`
 --
 ALTER TABLE `friend_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

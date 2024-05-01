@@ -1,6 +1,5 @@
-# BAUET-Glitters
-Social Media Platform for [Bangladesh Army University of Engineering & Technology (BAUET).](http://bauet.ac.bd/)
-
+# Boujodur Social [PFE]
+* Ayoub Sebaai : "khoya khdma mashi man3ndi kaml, khossossane jquery"
 ## Developing Tools: 
 
 * PHP
@@ -12,28 +11,6 @@ Social Media Platform for [Bangladesh Army University of Engineering & Technolog
 * Sublime Text -- Text Editor
 * XAMPP -- localhost server
 
-## A complete social website for all BAUETians. Like Facebook, Twitter & other social site. 
+## A complete social website .
+## Like Facebook, Twitter & other social site. 
 
-## Developed by:
-
-* [Jim AL Sadik](https://www.facebook.com/JIMALSADIK/),
-[Department of Computer Science & Engineering, BAUET](http://bauet.ac.bd/cse.html)
-Email: jimalsadik@gmail.com
-
-* Rabbi Ahmed,
-[Department of Computer Science & Engineering, BAUET](http://bauet.ac.bd/cse.html)
-Email: rabbi202@outlook.com
-
-* Noor-I- Tasnim Monir,
-[Department of Computer Science & Engineering, BAUET](http://bauet.ac.bd/cse.html)
-Email: tasnimsanda@gmail.com
-
-## Supervised By:
-
-* Md. Sumon Mia,
-Lecturer, [Department of Computer Science & Engineering, BAUET](http://bauet.ac.bd/cse.html)
-Email: summon.ruetbd@gmail.com
-
-* Md. Al-Amin,
-Lecturer, [Department of Computer Science & Engineering, BAUET](http://bauet.ac.bd/cse.html)
-Email: alamincse32@gmail.com
