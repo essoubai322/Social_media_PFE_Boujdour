@@ -1,5 +1,5 @@
 # Boujodur Social [PFE]
-* Ayoub Sebaai : "khoya khdma mashi man3ndi kaml, khossossane jquery"
+* Ayoub Sebaai : "Not Completed..."
 ## Developing Tools: 
 
 * PHP
